@@ -3,15 +3,21 @@ package se.lexicon.teri.jpa_workshop.entity;
 import java.util.Objects;
 
 public class OrderItem {
-    int id;
-    int quantity;
-    Product product;
-    ProductOrder productOrder;
+    private int id;
+    private double quantity;
+    private Product product;
+    private ProductOrder productOrder;
 
     public OrderItem() {
     }
 
-    public OrderItem(int id, int quantity, Product product, ProductOrder productOrder) {
+    public OrderItem(double quantity, Product product, ProductOrder productOrder) {
+        this.quantity = quantity;
+        this.product = product;
+        this.productOrder = productOrder;
+    }
+
+    public OrderItem(int id, double quantity, Product product, ProductOrder productOrder) {
         this.id = id;
         this.quantity = quantity;
         this.product = product;
@@ -26,7 +32,7 @@ public class OrderItem {
         this.id = id;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 

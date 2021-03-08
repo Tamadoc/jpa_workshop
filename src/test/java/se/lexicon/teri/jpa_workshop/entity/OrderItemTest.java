@@ -28,16 +28,16 @@ class OrderItemTest {
 
     @Test
     void getQuantity() {
-        int expected = 15;
-        int actual = testOrderItem.getQuantity();
+        double expected = 15;
+        double actual = testOrderItem.getQuantity();
         assertEquals(expected, actual);
     }
 
     @Test
     void setQuantity() {
         testOrderItem.setQuantity(30);
-        int expected = 30;
-        int actual = testOrderItem.getQuantity();
+        double expected = 30;
+        double actual = testOrderItem.getQuantity();
         assertEquals(expected, actual);
     }
 
@@ -67,6 +67,7 @@ class OrderItemTest {
     void setProductOrder() {
         ProductOrder productOrder2 = new ProductOrder();
         productOrder2.setId(1);
+        testOrderItem.setProductOrder(productOrder2);
         int expected = 1;
         int actual = testOrderItem.getProductOrder().getId();
         assertEquals(expected, actual);
