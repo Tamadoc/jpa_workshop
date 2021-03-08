@@ -3,11 +3,16 @@ package se.lexicon.teri.jpa_workshop.entity;
 import java.util.Objects;
 
 public class Product {
-    int id;
-    String name;
-    double price;
+    private int id;
+    private String name;
+    private double price;
 
     public Product() {
+    }
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
     }
 
     public Product(int id, String name, double price) {
@@ -39,7 +44,6 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
-
 
     @Override
     public boolean equals(Object o) {
