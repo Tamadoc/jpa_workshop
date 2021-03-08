@@ -3,12 +3,18 @@ package se.lexicon.teri.jpa_workshop.entity;
 import java.util.Objects;
 
 public class AppUser {
-    int id;
-    String firstName;
-    String lastName;
-    String email;
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String email;
 
     public AppUser() {
+    }
+
+    public AppUser(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
     }
 
     public AppUser(int id, String firstName, String lastName, String email) {
